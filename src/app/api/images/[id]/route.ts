@@ -41,6 +41,7 @@ export async function GET(
         "Content-Type": file.contentType ?? "application/octet-stream",
         "Content-Length": body.length.toString(),
         "Cache-Control": "public, max-age=31536000, immutable",
+        "Access-Control-Allow-Origin": "*",
       },
     });
   } catch (err) {
